@@ -1,10 +1,11 @@
+// Global constants and vars
 let squaresPerSide = 16;
-
 const grid = document.querySelector('#grid');
 const gridHeight = grid.clientHeight;
 const squares = [];
 const rows = [];
 
+// Functions
 function generateGridSquares() {
     const squareHeight = gridHeight / squaresPerSide;
 
@@ -43,9 +44,7 @@ function clearGrid() {
     }
 }
 
-generateGridSquares();
-const button = document.querySelector('#btn');
-button.addEventListener('click', () => {
+function getSquaresPerSideFromUser() {
     let userInput = prompt('How many squares would you like per side?', 0);
     let squaresPerSideRequested = parseInt(userInput.trim(), 10);
     if (!isNaN(squaresPerSideRequested) && squaresPerSideRequested <= 100 && squaresPerSideRequested > 0) {
@@ -55,4 +54,13 @@ button.addEventListener('click', () => {
     } else {
         alert('Invalid input! Please enter an integer value between 1 and 100.')
     }
-});
+}
+
+// Main logic 
+
+// Initialize grid
+generateGridSquares();
+
+// Add event listener for button click
+const button = document.querySelector('#btn');
+button.addEventListener('click', getSquaresPerSideFromUser);
