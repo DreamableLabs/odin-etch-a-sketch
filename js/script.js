@@ -26,9 +26,12 @@ function generateGridSquares() {
         for (let square of squareRow) {
             square.style.width = `${squareHeight}px`;
             square.style.height = `${squareHeight}px`;
+            square.style.opacity = '0.0';
             square.classList.add('square');
             square.addEventListener('mouseover', function() {
-                this.style.background = 'black';
+                let opacity = parseFloat(this.style.opacity);
+                let newOpacity = Math.min(opacity + 0.1, 1.0);
+                this.style.opacity = `${newOpacity}`;
             });
         }
     }

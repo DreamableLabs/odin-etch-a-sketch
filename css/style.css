@@ -25,7 +25,8 @@ body {
 }
 
 .square {
-    background: white;
+    background: black;
+    opacity: 0;
 }
 
 button {
