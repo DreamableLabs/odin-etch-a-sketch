@@ -16,3 +16,11 @@ body {
     width: 160px;
     background: black;
 }
+
+.row {
+    display: flex;
+}
+
+.square {
+    background: red;
+}
