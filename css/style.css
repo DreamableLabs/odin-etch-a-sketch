@@ -14,7 +14,8 @@ body {
 #grid {
     height: 160px;
     width: 160px;
-    background: black;
+    background: white;
+    border: 1px solid black;
 }
 
 .row {
@@ -22,5 +23,5 @@ body {
 }
 
 .square {
-    background: red;
+    background: white;
 }

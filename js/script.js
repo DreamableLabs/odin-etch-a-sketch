@@ -1,7 +1,7 @@
 const SQUARES_PER_SIDE = 16;
 
 const grid = document.querySelector('#grid');
-const gridHeight = grid.offsetHeight;
+const gridHeight = grid.clientHeight;
 console.log(gridHeight);
 const squareHeight = gridHeight / SQUARES_PER_SIDE;
 
@@ -26,5 +26,8 @@ for (let squareRow of squares) {
         square.style.width = `${squareHeight}px`;
         square.style.height = `${squareHeight}px`;
         square.classList.add('square');
+        square.addEventListener('mouseover', function() {
+            this.style.background = 'black';
+        });
     }
 }
