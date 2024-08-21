@@ -14,8 +14,8 @@ body {
 }
 
 #grid {
-    height: 160px;
-    width: 160px;
+    height: 400px;
+    width: 400px;
     background: white;
     border: 1px solid black;
 }
